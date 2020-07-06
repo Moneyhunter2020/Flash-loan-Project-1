@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node run-arbitrage.js"
   },
   "keywords": [],
   "author": "",
@@ -17,5 +18,8 @@
     "dotenv": "^8.2.0",
     "solhint": "^3.0.0",
     "web3": "^1.2.9"
+  },
+  "engines": {
+    "node": "12.x"
   }
 }

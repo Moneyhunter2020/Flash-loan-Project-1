@@ -9,6 +9,23 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import './IUniswapV2Router02.sol';
 import './IWeth.sol';
 
+interface ERC20GasToken {
+  function name (  ) external view returns ( string memory);
+  function freeFromUpTo ( address from, uint256 value ) external returns ( uint256 freed );
+  function approve ( address spender, uint256 value ) external returns ( bool success );
+  function totalSupply (  ) external view returns ( uint256 supply );
+  function transferFrom ( address from, address to, uint256 value ) external returns ( bool success );
+  function decimals (  ) external view returns ( uint8 );
+  function freeFrom ( address from, uint256 value ) external returns ( bool success );
+  function freeUpTo ( uint256 value ) external returns ( uint256 freed );
+  function balanceOf ( address owner ) external view returns ( uint256 balance );
+  function symbol (  ) external view returns ( string memory);
+  function mint ( uint256 value ) external;
+  function transfer ( address to, uint256 value ) external returns ( bool success );
+  function free ( uint256 value ) external returns ( bool success );
+  function allowance ( address owner, address spender ) external view returns ( uint256 remaining );
+}
+
 contract Flashloan is ICallee, DydxFlashloanBase {
     enum Direction { KyberToUniswap, UniswapToKyber } 
     struct ArbInfo {
@@ -28,6 +45,7 @@ contract Flashloan is ICallee, DydxFlashloanBase {
     IERC20 dai;
     address beneficiary;
     address constant KYBER_ETH_ADDRESS = 0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE;
+    ERC20GasToken gasToken = ERC20GasToken(0x0000000000b3F879cb30FE243b4Dfee438691c04);
 
     constructor(
         address kyberAddress,
@@ -71,6 +89,7 @@ contract Flashloan is ICallee, DydxFlashloanBase {
             balanceDai
           );
           kyber.swapTokenToEther(dai, balanceDai, expectedRate);
+          
 
           //Sell ETH on Uniswap
           address[] memory path = new address[](2);
@@ -83,6 +102,9 @@ contract Flashloan is ICallee, DydxFlashloanBase {
             address(this), 
             now
           );
+          if(gasToken.balanceOf(address(this)) >0){
+            gasToken.freeFromUpTo(address(this), gasToken.balanceOf(address(this)));
+          }
         } else {
           //Buy ETH on Uniswap
           dai.approve(address(uniswap), balanceDai); 
@@ -108,6 +130,9 @@ contract Flashloan is ICallee, DydxFlashloanBase {
             dai, 
             expectedRate
           );
+          if(gasToken.balanceOf(address(this)) >0){
+            gasToken.freeFromUpTo(address(this), gasToken.balanceOf(address(this)));
+          }
         }
         uint profit = dai.balanceOf(address(this)); 
         dai.transfer(beneficiary, profit);
@@ -147,5 +172,8 @@ contract Flashloan is ICallee, DydxFlashloanBase {
         accountInfos[0] = _getAccountInfo();
 
         solo.operate(accountInfos, operations);
+        if(gasToken.balanceOf(address(this)) >0){
+            gasToken.freeFromUpTo(address(this), gasToken.balanceOf(address(this)));
+        }
     }
 }

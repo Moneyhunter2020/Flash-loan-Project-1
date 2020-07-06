@@ -66,8 +66,8 @@ module.exports = {
         process.env.INFURA_URL
       ),
       network_id: 1,       //mainnet 
-      gas: 2300000,
-      gasPrice: 20300000000,
+      gas: 4500000,
+      gasPrice: 22000000000,
     },
 
     // Useful for private networks

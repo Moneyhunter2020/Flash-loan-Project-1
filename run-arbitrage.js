@@ -23,7 +23,7 @@ const kyber = new web3.eth.Contract(
 
 
 
-const AMOUNT_ETH = 0.01;
+const AMOUNT_ETH = 100;
 const RECENT_ETH_PRICE = 230;
 const AMOUNT_ETH_WEI = web3.utils.toWei(AMOUNT_ETH.toString());
 const AMOUNT_DAI_WEI = web3.utils.toWei((AMOUNT_ETH * RECENT_ETH_PRICE).toString());

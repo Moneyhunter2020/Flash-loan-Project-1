@@ -58,14 +58,14 @@
     "absolutePath": "/C/Users/Noah/flashLoans/profitable-flashloans/contracts/IWeth.sol",
     "exportedSymbols": {
       "IWeth": [
-        921
+        1101
       ]
     },
-    "id": 922,
+    "id": 1102,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 905,
+        "id": 1085,
         "literals": [
           "solidity",
           "^",
@@ -81,9 +81,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 921,
+        "id": 1101,
         "linearizedBaseContracts": [
-          921
+          1101
         ],
         "name": "IWeth",
         "nodeType": "ContractDefinition",
@@ -91,25 +91,25 @@
           {
             "body": null,
             "documentation": null,
-            "id": 908,
+            "id": 1088,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "deposit",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 906,
+              "id": 1086,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "775:2:4"
             },
             "returnParameters": {
-              "id": 907,
+              "id": 1087,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "794:0:4"
             },
-            "scope": 921,
+            "scope": 1101,
             "src": "759:36:4",
             "stateMutability": "payable",
             "superFunction": null,
@@ -118,22 +118,22 @@
           {
             "body": null,
             "documentation": null,
-            "id": 913,
+            "id": 1093,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "withdraw",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 911,
+              "id": 1091,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 910,
+                  "id": 1090,
                   "name": "wad",
                   "nodeType": "VariableDeclaration",
-                  "scope": 913,
+                  "scope": 1093,
                   "src": "819:8:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -142,7 +142,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 909,
+                    "id": 1089,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "819:4:4",
@@ -158,12 +158,12 @@
               "src": "818:10:4"
             },
             "returnParameters": {
-              "id": 912,
+              "id": 1092,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "837:0:4"
             },
-            "scope": 921,
+            "scope": 1101,
             "src": "801:37:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -172,22 +172,22 @@
           {
             "body": null,
             "documentation": null,
-            "id": 920,
+            "id": 1100,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "balanceOf",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 916,
+              "id": 1096,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 915,
+                  "id": 1095,
                   "name": "owner",
                   "nodeType": "VariableDeclaration",
-                  "scope": 920,
+                  "scope": 1100,
                   "src": "863:13:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -196,7 +196,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 914,
+                    "id": 1094,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "863:7:4",
@@ -213,15 +213,15 @@
               "src": "862:15:4"
             },
             "returnParameters": {
-              "id": 919,
+              "id": 1099,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 918,
+                  "id": 1098,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 920,
+                  "scope": 1100,
                   "src": "900:4:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -230,7 +230,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 917,
+                    "id": 1097,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "900:4:4",
@@ -245,14 +245,14 @@
               ],
               "src": "899:6:4"
             },
-            "scope": 921,
+            "scope": 1101,
             "src": "844:62:4",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 922,
+        "scope": 1102,
         "src": "736:173:4"
       }
     ],
@@ -262,14 +262,14 @@
     "absolutePath": "/C/Users/Noah/flashLoans/profitable-flashloans/contracts/IWeth.sol",
     "exportedSymbols": {
       "IWeth": [
-        921
+        1101
       ]
     },
-    "id": 922,
+    "id": 1102,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 905,
+        "id": 1085,
         "literals": [
           "solidity",
           "^",
@@ -285,9 +285,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 921,
+        "id": 1101,
         "linearizedBaseContracts": [
-          921
+          1101
         ],
         "name": "IWeth",
         "nodeType": "ContractDefinition",
@@ -295,25 +295,25 @@
           {
             "body": null,
             "documentation": null,
-            "id": 908,
+            "id": 1088,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "deposit",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 906,
+              "id": 1086,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "775:2:4"
             },
             "returnParameters": {
-              "id": 907,
+              "id": 1087,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "794:0:4"
             },
-            "scope": 921,
+            "scope": 1101,
             "src": "759:36:4",
             "stateMutability": "payable",
             "superFunction": null,
@@ -322,22 +322,22 @@
           {
             "body": null,
             "documentation": null,
-            "id": 913,
+            "id": 1093,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "withdraw",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 911,
+              "id": 1091,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 910,
+                  "id": 1090,
                   "name": "wad",
                   "nodeType": "VariableDeclaration",
-                  "scope": 913,
+                  "scope": 1093,
                   "src": "819:8:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -346,7 +346,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 909,
+                    "id": 1089,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "819:4:4",
@@ -362,12 +362,12 @@
               "src": "818:10:4"
             },
             "returnParameters": {
-              "id": 912,
+              "id": 1092,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "837:0:4"
             },
-            "scope": 921,
+            "scope": 1101,
             "src": "801:37:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -376,22 +376,22 @@
           {
             "body": null,
             "documentation": null,
-            "id": 920,
+            "id": 1100,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "balanceOf",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 916,
+              "id": 1096,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 915,
+                  "id": 1095,
                   "name": "owner",
                   "nodeType": "VariableDeclaration",
-                  "scope": 920,
+                  "scope": 1100,
                   "src": "863:13:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -400,7 +400,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 914,
+                    "id": 1094,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "863:7:4",
@@ -417,15 +417,15 @@
               "src": "862:15:4"
             },
             "returnParameters": {
-              "id": 919,
+              "id": 1099,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 918,
+                  "id": 1098,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 920,
+                  "scope": 1100,
                   "src": "900:4:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -434,7 +434,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 917,
+                    "id": 1097,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "900:4:4",
@@ -449,14 +449,14 @@
               ],
               "src": "899:6:4"
             },
-            "scope": 921,
+            "scope": 1101,
             "src": "844:62:4",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 922,
+        "scope": 1102,
         "src": "736:173:4"
       }
     ],
@@ -468,7 +468,7 @@
   },
   "networks": {},
   "schemaVersion": "3.2.1",
-  "updatedAt": "2020-07-05T01:57:05.658Z",
+  "updatedAt": "2020-07-06T01:44:33.237Z",
   "devdoc": {
     "methods": {}
   },
