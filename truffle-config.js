@@ -67,7 +67,7 @@ module.exports = {
       ),
       network_id: 1,       //mainnet 
       gas: 4500000,
-      gasPrice: 22000000000,
+      gasPrice: 30000000000,
     },
 
     // Useful for private networks

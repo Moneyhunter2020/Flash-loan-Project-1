@@ -9,6 +9,15 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import './IUniswapV2Router02.sol';
 import './IWeth.sol';
 
+//interface OrFeedInterface {
+//  function getExchangeRate ( string calldata fromSymbol, string calldata  toSymbol, string calldata venue, uint256 amount ) external view returns ( uint256 );
+//  function getTokenDecimalCount ( address tokenAddress ) external view returns ( uint256 );
+//  function getTokenAddress ( string calldata  symbol ) external view returns ( address );
+//  function getSynthBytes32 ( string calldata  symbol ) external view returns ( bytes32 );
+//  function getForexAddress ( string calldata symbol ) external view returns ( address );
+//  function arb(address  fundsReturnToAddress,  address liquidityProviderContractAddress, string[] calldata   tokens,  uint256 amount, string[] calldata  exchanges) external payable returns (bool);
+//}
+
 interface ERC20GasToken {
   function name (  ) external view returns ( string memory);
   function freeFromUpTo ( address from, uint256 value ) external returns ( uint256 freed );
@@ -46,7 +55,7 @@ contract Flashloan is ICallee, DydxFlashloanBase {
     address beneficiary;
     address constant KYBER_ETH_ADDRESS = 0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE;
     ERC20GasToken gasToken = ERC20GasToken(0x0000000000b3F879cb30FE243b4Dfee438691c04);
-
+    
     constructor(
         address kyberAddress,
         address uniswapAddress,
@@ -134,12 +143,12 @@ contract Flashloan is ICallee, DydxFlashloanBase {
             gasToken.freeFromUpTo(address(this), gasToken.balanceOf(address(this)));
           }
         }
-        uint profit = dai.balanceOf(address(this)); 
+        uint profit = dai.balanceOf(address(this)) - arbInfo.repayAmount; 
         dai.transfer(beneficiary, profit);
         emit NewArbitrage(arbInfo.direction, profit, now);
     }
 
-    function initateFlashLoan(
+    function initiateFlashloan(
       address _solo, 
       address _token, 
       uint256 _amount, 
